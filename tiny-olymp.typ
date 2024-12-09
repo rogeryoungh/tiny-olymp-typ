@@ -31,11 +31,14 @@
 
 #let url-color = rgb(128, 0, 0)
 
-#let project(title: "", author: "", second-header: none, date: datetime.today(), abstract: "", outlined: false, body) = {
+#let project(title: "", author: "", second-header: none, date: datetime.today(), titlepage: true, body) = {
   // 字体
   // "Palatino Linotype", "Linux Libertine", "Noto Serif CJK SC"
   set text(font: serif-font, lang: "zh", region: "cn", size: 12pt)
 	show raw: set text(font: mono-font, size: 12pt)
+
+
+  include "titlepage.typ"
 
   // 设置文档基本属性
   set document(author: author, title: title)
