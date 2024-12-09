@@ -38,7 +38,9 @@
 	show raw: set text(font: mono-font, size: 12pt)
 
 
-  include "titlepage.typ"
+  if titlepage {
+    include "titlepage.typ"
+  }
 
   // 设置文档基本属性
   set document(author: author, title: title)
